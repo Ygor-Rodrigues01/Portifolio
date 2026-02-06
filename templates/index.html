@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}Início{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center hero-content">
+                <h1 class="fade-in">Olá, eu sou <span style="color: var(--primary-color);">Ygor Rodrigues</span></h1>
+                <p class="fade-in delay-1">Desenvolvedor e Técnico que gosta de criar soluções inovadoras e resolver problemas envolvendo a manutenção de computadores</p>
+                <div class="d-flex justify-content-center gap-3 fade-in delay-2">
+                    <a href="{{ url_for('projects') }}" class="btn btn-primary">Meus Projetos</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-primary">Contato</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Sobre Mim</h2>
+        </div>
+        <div class="row justify-content-center">
+            <!-- Coluna da foto -->
+            <div class="col-lg-5 mb-4 mb-lg-0">
+                <div class="about-photo">
+                    <img src="{{ url_for('static', filename='img/Eu.jpg') }}" 
+                         alt="Ygor Rodrigues"
+                         class="img-fluid rounded shadow">
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="about-content fade-in">
+                    <p>👋 Olá! Sou um Técnico com experiência em manutenção de hardwares e programação. Gosto de tecnologia e estou sempre buscando aprender e me aprimorar.</p>
+                    <br>
+                    <p>💻 Minha jornada como técnico começou há alguns anos, e desde então venho desenvolvendo projetos e adquirindo experiências nas áreas de manutenção e programação.</p>
+                    <br>
+                    <p>🚀 Estou sempre aberto a novos desafios e oportunidades de colaboração. Se você tem um projeto interessante ou quer conversar sobre tecnologia, sinta-se à vontade para entrar em contato!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Habilidades</h2>
+        </div>
+        <div class="skills-container">
+            <div class="skill-card fade-in">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend</h3>
+                <p>HTML</p>
+            </div>
+            <div class="skill-card fade-in delay-1">
+                <div class="skill-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend</h3>
+                <p>Python, Flask, Pygame</p>
+            </div>
+            <div class="skill-card fade-in delay-2">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Banco de Dados</h3>
+                <p>MySQL, SQLite</p>
+        </div>
+        <div class="skill-card fade-in delay-3">
+            <div class="skill-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h3>Manutenção</h3>
+            <p>Limpeza, conserto e formatação</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
